@@ -1,23 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { setReserved, setUnReserved } from '../../redux/missions/missions';
 import classes from './Missions.module.css';
 
 const Mission = ({ mission }) => {
-  const { name, description } = mission;
-  const [joinMission, setJoinMission] = useState(false);
-  const [buttonContent, setButtonContent] = useState('Join Mission');
-  const [status, setStatus] = useState('NOT A MEMBER');
+  const {
+    id, name, description, reserved,
+  } = mission;
+  const dispatch = useDispatch();
 
   const handleJoinMission = () => {
-    if (!joinMission) {
-      setButtonContent('Leave Mission');
-      setStatus('Active Member');
-    } else if (joinMission) {
-      setButtonContent('Join Mission');
-      setStatus('NOT A MEMBER');
+    if (!reserved) {
+      dispatch(setReserved(id));
+    } else if (reserved) {
+      dispatch(setUnReserved(id));
     }
-
-    setJoinMission(() => !joinMission);
   };
 
   return (
@@ -25,14 +23,28 @@ const Mission = ({ mission }) => {
       <td className={classes.tableData}>{name}</td>
       <td className={classes.tableData}>{description}</td>
       <td className={classes.tableData}>
-        <span className={`${classes.tableDataStatus} ${!joinMission ? classes.statusActive : classes.statusInactive}`}>
-          {status}
-        </span>
+        {reserved && (
+          <span className={`${classes.tableDataStatus} ${classes.statusInactive}`}>
+            Active Member
+          </span>
+        )}
+        {!reserved && (
+          <span className={`${classes.tableDataStatus} ${classes.statusActive}`}>
+            NOT A MEMBER
+          </span>
+        )}
       </td>
       <td className={`${classes.tableData} ${classes.tableDataBtn}`}>
-        <button className={!joinMission ? classes.joinMissionBtn : classes.leaveMissionBtn} onClick={handleJoinMission} type="button">
-          {buttonContent}
-        </button>
+        { reserved && (
+          <button className={classes.leaveMissionBtn} onClick={handleJoinMission} type="button">
+            Leave Mission
+          </button>
+        )}
+        {!reserved && (
+          <button className={classes.joinMissionBtn} onClick={handleJoinMission} type="button">
+            Join Mission
+          </button>
+        )}
       </td>
     </tr>
   );
@@ -43,6 +55,7 @@ Mission.defaultProps = {
     id: '',
     name: '',
     description: '',
+    reserved: '',
   },
 };
 
@@ -51,6 +64,7 @@ Mission.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    reserved: PropTypes.bool,
   }),
 };
 

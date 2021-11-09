@@ -12,7 +12,10 @@ const Missions = () => {
     const loadingMissions = async () => {
       await dispatch(getMissions());
     };
-    loadingMissions();
+
+    if (missions.length === 0) {
+      loadingMissions();
+    }
   }, []);
 
   return (
