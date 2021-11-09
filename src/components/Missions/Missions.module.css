@@ -1,0 +1,30 @@
+.missionsTable {
+  border-collapse: collapse;
+}
+
+.tableHead {
+}
+
+.tableContainer {
+  border: 1px solid gray;
+}
+
+.tableHeader {
+  text-align: start;
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  padding: 1rem;
+}
+
+.tableRow {
+  padding: 1rem;
+}
+
+.tableData {
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding: 10px;
+}
