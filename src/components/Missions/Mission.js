@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setReserved, setUnReserved } from '../../redux/missions/missions';
 import classes from './Missions.module.css';
 
 const Mission = ({ mission }) => {
   const { id, name, description } = mission;
-  const joinMission = useSelector((state) => state);
+  const [joinMission, setJoinMission] = useState(false);
   const [buttonContent, setButtonContent] = useState('Join Mission');
   const [status, setStatus] = useState('NOT A MEMBER');
   const dispatch = useDispatch();
@@ -21,6 +21,8 @@ const Mission = ({ mission }) => {
       setStatus('NOT A MEMBER');
       dispatch(setUnReserved(id));
     }
+
+    setJoinMission(() => !joinMission);
   };
 
   return (
