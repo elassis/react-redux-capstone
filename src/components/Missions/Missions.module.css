@@ -16,10 +16,17 @@
 
 .tableDataStatus {
   white-space: nowrap;
-  background-color: gray;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   color: #fff;
+}
+
+.statusActive {
+  background-color: gray;
+}
+
+.statusInactive {
+  background-color: blue;
 }
 
 .tableData {
@@ -42,10 +49,12 @@
   font-size: 1rem;
   cursor: pointer;
   border-radius: 0.5rem;
+  color: black;
 }
 
 .joinMissionBtn:hover {
   background-color: blue;
+  color: #fff;
 }
 
 .joinMissionBtn:active {
@@ -60,10 +69,12 @@
   font-size: 1rem;
   cursor: pointer;
   border-radius: 0.5rem;
+  color: black;
 }
 
 .leaveMissionBtn:hover {
   background-color: red;
+  color: #fff;
 }
 
 .leaveMissionBtn:active {
