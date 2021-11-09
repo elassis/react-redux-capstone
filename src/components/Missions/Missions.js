@@ -1,24 +1,19 @@
-/* eslint-disable max-len */
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getMissions } from '../../redux/missions/missions';
 import classes from './Missions.module.css';
+import Mission from './Mission';
 
 const Missions = () => {
-  const dummydata = [
-    {
-      id: 1,
-      mission: 'Thaicon',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-      status: 'NOT A MEMBER',
-    },
+  const missions = useSelector((state) => state.missionsReducer);
+  const dispatch = useDispatch();
 
-    {
-      id: 2,
-      mission: 'Telstar',
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae',
-      status: 'Active Member',
-    },
-
-  ];
+  useEffect(() => {
+    const loadingMissions = async () => {
+      await dispatch(getMissions());
+    };
+    loadingMissions();
+  }, []);
 
   return (
     <section>
@@ -32,22 +27,9 @@ const Missions = () => {
           </tr>
         </thead>
         <tbody>
-          {dummydata.map((data) => {
-            let button;
-            if (data.status === 'NOT A MEMBER') {
-              button = <button className={classes.joinMissionBtn} type="button">Join Mission</button>;
-            } else {
-              button = <button className={classes.leaveMissionBtn} type="button">Leave Mission</button>;
-            }
-            return (
-              <tr key={data.id} className={classes.tableRow}>
-                <td className={classes.tableData}>{data.mission}</td>
-                <td className={classes.tableData}>{data.description}</td>
-                <td className={classes.tableData}><span className={classes.tableDataStatus}>{data.status}</span></td>
-                <td className={`${classes.tableData} ${classes.tableDataBtn}`}>{button}</td>
-              </tr>
-            );
-          })}
+          {missions.map((mission) => (
+            <Mission key={mission.id} mission={mission} />
+          ))}
         </tbody>
       </table>
     </section>

@@ -16,10 +16,17 @@
 
 .tableDataStatus {
   white-space: nowrap;
-  background-color: gray;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   color: #fff;
+}
+
+.statusActive {
+  background-color: gray;
+}
+
+.statusInactive {
+  background-color: blue;
 }
 
 .tableData {
