@@ -1,11 +1,13 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
+import Header from './header/Header';
 
 const App = () => (
   <div>
     <main>
       <Switch>
+        <Header />
         <Route exact path="/">
           <Redirect to="/rockets" />
         </Route>
