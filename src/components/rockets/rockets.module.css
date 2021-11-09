@@ -1,39 +1,56 @@
-.rocketList{
+.rocketList {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 10px;
 }
-.row{
+
+.row {
   width: 100%;
   display: flex;
   gap: 20px;
   padding: 10px;
 }
-.title{
+
+.title {
   text-transform: capitalize;
-    font-size: 18px;
-    font-weight: bold;
-    padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 10px;
 }
-.badge{
+
+.badge {
   float: left;
-  padding-right: 7px;
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: bold;
+  background: #39f;
+  color: #fff;
+  padding: 2px;
+  border-radius: 3px;
+  margin-right: 6px;
+  display: none;
 }
-.image{
-  width: 23%;
-  height:145px;
+
+.image {
+  width: 200px;
+  height: 145px;
   border: 1px solid grey;
 }
-button{
+
+button {
   margin-top: 10px;
-    padding: 10px;
-    text-transform: capitalize;
-    font-weight: 600;
-    border-radius: 2px;
-    color: #fff;
-    background: #0066cc;
-    border: none;
-    cursor: pointer;
+  padding: 10px;
+  text-transform: capitalize;
+  font-weight: 600;
+  border-radius: 2px;
+  color: #fff;
+  background: #06c;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004c99;
 }
