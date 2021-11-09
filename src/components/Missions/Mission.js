@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { setReserved, setUnReserved } from '../../redux/missions/missions';
@@ -8,18 +8,12 @@ const Mission = ({ mission }) => {
   const {
     id, name, description, reserved,
   } = mission;
-  const [buttonContent, setButtonContent] = useState('Join Mission');
-  const [status, setStatus] = useState('NOT A MEMBER');
   const dispatch = useDispatch();
 
   const handleJoinMission = () => {
     if (!reserved) {
-      setButtonContent('Leave Mission');
-      setStatus('Active Member');
       dispatch(setReserved(id));
     } else if (reserved) {
-      setButtonContent('Join Mission');
-      setStatus('NOT A MEMBER');
       dispatch(setUnReserved(id));
     }
   };
@@ -29,14 +23,28 @@ const Mission = ({ mission }) => {
       <td className={classes.tableData}>{name}</td>
       <td className={classes.tableData}>{description}</td>
       <td className={classes.tableData}>
-        <span className={`${classes.tableDataStatus} ${!reserved ? classes.statusActive : classes.statusInactive}`}>
-          {status}
-        </span>
+        {reserved && (
+          <span className={`${classes.tableDataStatus} ${classes.statusInactive}`}>
+            Active Member
+          </span>
+        )}
+        {!reserved && (
+          <span className={`${classes.tableDataStatus} ${classes.statusActive}`}>
+            NOT A MEMBER
+          </span>
+        )}
       </td>
       <td className={`${classes.tableData} ${classes.tableDataBtn}`}>
-        <button className={!reserved ? classes.joinMissionBtn : classes.leaveMissionBtn} onClick={handleJoinMission} type="button">
-          {buttonContent}
-        </button>
+        { reserved && (
+          <button className={classes.leaveMissionBtn} onClick={handleJoinMission} type="button">
+            Leave Mission
+          </button>
+        )}
+        {!reserved && (
+          <button className={classes.joinMissionBtn} onClick={handleJoinMission} type="button">
+            Join Mission
+          </button>
+        )}
       </td>
     </tr>
   );
