@@ -1,0 +1,39 @@
+.rocketList{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+.row{
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+.title{
+  text-transform: capitalize;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.badge{
+  float: left;
+  padding-right: 7px;
+}
+.image{
+  width: 23%;
+  height:145px;
+  border: 1px solid grey;
+}
+button{
+  margin-top: 10px;
+    padding: 10px;
+    text-transform: capitalize;
+    font-weight: 600;
+    border-radius: 2px;
+    color: #fff;
+    background: #0066cc;
+    border: none;
+    cursor: pointer;
+}
