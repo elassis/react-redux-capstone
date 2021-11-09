@@ -35,16 +35,16 @@ const Missions = () => {
           {dummydata.map((data) => {
             let button;
             if (data.status === 'NOT A MEMBER') {
-              button = 'Join Mission';
+              button = <button className={classes.joinMissionBtn} type="button">Join Mission</button>;
             } else {
-              button = 'Active Mission';
+              button = <button className={classes.leaveMissionBtn} type="button">Leave Mission</button>;
             }
             return (
               <tr key={data.id} className={classes.tableRow}>
                 <td className={classes.tableData}>{data.mission}</td>
                 <td className={classes.tableData}>{data.description}</td>
-                <td className={classes.tableData}>{data.status}</td>
-                <td className={classes.tableData}>{button}</td>
+                <td className={classes.tableData}><span className={classes.tableDataStatus}>{data.status}</span></td>
+                <td className={`${classes.tableData} ${classes.tableDataBtn}`}>{button}</td>
               </tr>
             );
           })}
