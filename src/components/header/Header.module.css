@@ -1,0 +1,48 @@
+.navbar {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo {
+  width: 14%;
+  height: auto;
+}
+
+.listContainer {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.link > a {
+  text-decoration: none;
+  color: rgb(0, 119, 255);
+}
+
+.logoContainer {
+  display: flex;
+  width: 50%;
+  gap: 28px;
+  align-items: center;
+}
+
+.logoContainer > p {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.activeLink {
+  font-weight: bold;
+  text-decoration: underline;
+  border-bottom: 1px solid rgb(0, 119, 255);
+}
