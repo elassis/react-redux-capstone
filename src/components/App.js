@@ -5,9 +5,9 @@ import Header from './header/Header';
 
 const App = () => (
   <div>
+    <Header />
     <main>
       <Switch>
-        <Header />
         <Route exact path="/">
           <Redirect to="/rockets" />
         </Route>

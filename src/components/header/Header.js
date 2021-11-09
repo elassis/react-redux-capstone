@@ -30,7 +30,7 @@ const Header = () => {
       <ul className={classes.listContainer}>
         {routes.map((route) => (
           <li className={classes.link} key={route.id}>
-            <NavLink to={route.path} exact>
+            <NavLink to={route.path} activeClassName={classes.activeLink} exact>
               {route.text}
             </NavLink>
           </li>
