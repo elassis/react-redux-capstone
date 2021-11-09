@@ -1,0 +1,71 @@
+.missionsTable {
+  border-collapse: collapse;
+}
+
+.tableContainer {
+  border: 1px solid gray;
+}
+
+.tableHeader {
+  text-align: start;
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  padding: 1rem;
+}
+
+.tableDataStatus {
+  white-space: nowrap;
+  background-color: gray;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+.tableData {
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding: 1rem;
+}
+
+.tableDataBtn {
+  padding: 2rem;
+}
+
+.joinMissionBtn {
+  background-color: #fff;
+  border: 1px solid blue;
+  padding: 0.8rem 1rem;
+  white-space: nowrap;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.joinMissionBtn:hover {
+  background-color: blue;
+}
+
+.joinMissionBtn:active {
+  background-color: #fff;
+}
+
+.leaveMissionBtn {
+  background-color: #fff;
+  border: 1px solid red;
+  padding: 0.8rem 1rem;
+  white-space: nowrap;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.leaveMissionBtn:hover {
+  background-color: red;
+}
+
+.leaveMissionBtn:active {
+  background-color: #fff;
+}
