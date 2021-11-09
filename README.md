@@ -9,7 +9,8 @@
 - React
 - React-dom
 - Redux
-- Thunk
+- Redux-Thunk
+- React-Router
 - Axios
 - Webpack
 - Babel
