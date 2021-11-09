@@ -6,7 +6,7 @@ import classes from './App.module.css';
 
 const App = () => (
   <div>
-  <Header />
+    <Header />
     <main className={classes.appContainer}>
       <Switch>
         <Route exact path="/">

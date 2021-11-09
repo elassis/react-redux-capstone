@@ -18,7 +18,7 @@ const Header = () => {
     {
       id: 2,
       text: 'my profile',
-      path: '/my-profile',
+      path: '/myprofile',
     },
   ];
   return (
