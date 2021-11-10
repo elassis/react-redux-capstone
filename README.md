@@ -1,5 +1,9 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
+# Live Demo
+
+[Website](https://react-redux-capstone-jose-enmanuel.netlify.app/rockets)
+
 # Space Travelers' Hub - Jose Abel Ramirez Frontany and Enmanuel Lassis
 
 ![screenshot](./app_screenshot.png)
