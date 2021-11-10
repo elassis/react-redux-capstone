@@ -36,7 +36,7 @@ That's all, you are ready to go!
 Run the following command to have all yarn packages dependencies installed:
 
 ```
-    yarn install
+    npm install
 ```
 
 ### Usage
@@ -45,6 +45,14 @@ To run the "react-scripts start" script, type the following command:
 
 ```
     npm start
+```
+
+### Tests with React Testing Library
+
+To run the tests files for React Testing Library type the following
+
+```
+    npm test
 ```
 
 ### Linters
