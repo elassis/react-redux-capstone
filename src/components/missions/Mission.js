@@ -56,7 +56,7 @@ Mission.defaultProps = {
     id: '',
     name: '',
     description: '',
-    reserved: '',
+    reserved: false,
   },
 };
 
