@@ -3,11 +3,7 @@
   display: flex;
 }
 
-.rockets {
-  width: 50%;
-}
-
-.missions {
+.components {
   width: 50%;
 }
 
