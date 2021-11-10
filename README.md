@@ -13,7 +13,7 @@
 - Redux
 - Redux-Thunk
 - React-Router
-- Axios
+- Fetch
 - Webpack
 - Babel
 - HTML
