@@ -8,7 +8,6 @@
 
 .row {
   width: 100%;
-  display: flex;
   gap: 20px;
   padding: 10px;
 }
@@ -30,12 +29,13 @@
   padding: 2px;
   border-radius: 3px;
   margin-right: 6px;
-  display: none;
 }
 
 .image {
   width: 200px;
   height: 145px;
+  float: left;
+  padding-right: 20px;
 }
 
 button {
@@ -50,6 +50,23 @@ button {
   cursor: pointer;
 }
 
+.cancel {
+  margin-top: 10px;
+  padding: 10px;
+  text-transform: capitalize;
+  font-weight: 600;
+  border-radius: 2px;
+  color: grey;
+  background: #fff;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
 button:hover {
   background-color: #004c99;
+}
+
+.cancel:hover {
+  background-color: grey;
+  color: #fff;
 }

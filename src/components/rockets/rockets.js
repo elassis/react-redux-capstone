@@ -11,7 +11,9 @@ const Rockets = () => {
     const loadRockets = async () => {
       await dispatch(getRockets());
     };
-    loadRockets();
+    if (RocketsFetched.length === 0) {
+      loadRockets();
+    }
   }, []);
   return (
     <div>
@@ -23,6 +25,7 @@ const Rockets = () => {
             title={rocket.title}
             image={rocket.image}
             description={rocket.description}
+            reserved={rocket.reserved}
           />
         ))}
       </ul>
