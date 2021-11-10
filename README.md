@@ -2,7 +2,9 @@
 
 # Space Travelers' Hub - Jose Abel Ramirez Frontany and Enmanuel Lassis
 
-<!-- ![screenshot](./app_screenshot.png) -->
+![screenshot](./app_screenshot.png)
+![screenshot](./app_screenshot2.png)
+![screenshot](./app_screenshot3.png)
 
 ## Built With
 
@@ -76,7 +78,7 @@ To run the CSS linters type the following
 - GitHub: [Jose Abel Ramirez Frontany](https://github.com/jose-Abel)
 - Linkedin: [Jose Abel Ramirez Frontany](www.linkedin.com/in/joseabelramirezfrontany)
 
-### Author: Emmanuel Lassis \*\*
+### Author: Enmanuel Lassis \*\*
 
 - GitHub: [Enmanuel Lassis](https://github.com/elassis)
 - Linkedin: [Enmanuel Lassis](https://www.linkedin.com/in/enmanuel-lassis-pe%C3%B1a/)
