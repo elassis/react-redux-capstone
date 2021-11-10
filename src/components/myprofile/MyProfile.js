@@ -10,24 +10,24 @@ const MyProfile = () => {
 
   return (
     <section className={classes.myprofileContainer}>
-      <div className={classes.missions}>
-        <h2>My Rockets</h2>
-
-        <ul className={classes.myProfileUl}>
-          {reservedRockets.map((rocket) => (
-            <li key={rocket.id} className={classes.myProfileLi}>
-              {rocket.title}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className={classes.missions}>
+      <div className={classes.components}>
         <h2>My Missions</h2>
 
         <ul className={classes.myProfileUl}>
           {reservedMissions.map((mission) => (
             <li key={mission.id} className={classes.myProfileLi}>
               {mission.name}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className={classes.components}>
+        <h2>My Rockets</h2>
+
+        <ul className={classes.myProfileUl}>
+          {reservedRockets.map((rocket) => (
+            <li key={rocket.id} className={classes.myProfileLi}>
+              {rocket.title}
             </li>
           ))}
         </ul>
