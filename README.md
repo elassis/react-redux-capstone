@@ -2,7 +2,7 @@
 
 # Live Demo
 
-[Website](https://react-redux-capstone-jose-enmanuel.netlify.app/rockets)
+[Website](https://react-redux-capstone-jose-enmanuel.netlify.app/)
 
 # Space Travelers' Hub - Jose Abel Ramirez Frontany and Enmanuel Lassis
 
