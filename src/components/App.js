@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Header from './header/Header';
-import Rockets from './rockets/rockets';
+import Rockets from './rockets/Rockets';
 import Missions from './missions/Missions';
 import MyProfile from './myprofile/MyProfile';
 import classes from './App.module.css';
