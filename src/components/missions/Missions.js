@@ -30,9 +30,12 @@ const Missions = () => {
           </tr>
         </thead>
         <tbody>
-          {missions.map((mission) => (
-            <Mission key={mission.id} mission={mission} />
-          ))}
+          {missions.map((mission, i) => {
+            if (i % 2 === 0) {
+              return <Mission key={mission.id} mission={mission} background={classes.bgGray} />;
+            }
+            return <Mission key={mission.id} mission={mission} />;
+          })}
         </tbody>
       </table>
     </section>

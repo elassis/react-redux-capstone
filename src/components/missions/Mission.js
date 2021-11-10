@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { setReserved, setUnReserved } from '../../redux/missions/missions';
 import classes from './Missions.module.css';
 
-const Mission = ({ mission }) => {
+const Mission = ({ mission, background }) => {
   const {
     id, name, description, reserved,
   } = mission;
@@ -19,7 +19,7 @@ const Mission = ({ mission }) => {
   };
 
   return (
-    <tr className={classes.tableRow}>
+    <tr className={background}>
       <td className={classes.tableData}>{name}</td>
       <td className={classes.tableData}>{description}</td>
       <td className={classes.tableData}>
@@ -51,6 +51,7 @@ const Mission = ({ mission }) => {
 };
 
 Mission.defaultProps = {
+  background: '',
   mission: {
     id: '',
     name: '',
@@ -66,6 +67,7 @@ Mission.propTypes = {
     description: PropTypes.string.isRequired,
     reserved: PropTypes.bool,
   }),
+  background: PropTypes.string,
 };
 
 export default Mission;
