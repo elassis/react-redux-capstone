@@ -1,0 +1,26 @@
+.myprofileContainer {
+  width: 100%;
+  display: flex;
+}
+
+.components {
+  width: 50%;
+}
+
+.myProfileUl {
+  margin-top: 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.849);
+  width: 90%;
+  border-radius: 0.3rem;
+}
+
+.myProfileLi {
+  list-style: none;
+  padding: 2rem;
+  font-size: 1.3rem;
+  color: gray;
+}
+
+.myProfileLi:not(:last-child) {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.849);
+}
